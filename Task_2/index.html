@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form</title>
     <style>
+      :root {
+        --font-color: grey;
+      }
+
       body {
         margin: 0;
         padding: 0 150px;
         font-family: Tahoma, Verdana, sans-serif;
       }
 
+      sup {
+        color: red;
+      }
       /* Header */
       .header-img {
         display: flex;
@@ -54,11 +61,63 @@
         margin-bottom: 0px;
       }
 
-      .m-h3 h5 {
+      .m-h3 small {
+        flex-direction: row;
+        gap: 2px;
         padding: 0px 20px;
         color: gray;
         font-weight: 300;
-        margin-top: 1px;
+      }
+
+      .flex {
+        display: flex;
+        color: var(--font-color);
+      }
+
+      .form-left {
+        padding: 0px 20px;
+        width: 100%;
+      }
+
+      .form-right {
+        padding: 0px 20px;
+        width: 100%;
+        border-left: 1px solid gray;
+      }
+
+      .g-font {
+        color: var(--font-color);
+      }
+
+      small {
+        color: var(--font-color);
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 10px;
+      }
+
+      .form-wrapper {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      input {
+        width: 100%;
+        height: 30px;
+        background-color: white;
+        border: 1px solid lightgray;
+      }
+
+      .gender {
+        display: flex;
+        width: 100px;
+        gap: 10px;
+        text-align: center;
+        align-items: center;
+      }
+
+      label {
+        padding-top: 10px;
       }
     </style>
   </head>
@@ -91,10 +150,112 @@
       <section id="form-container">
         <div class="m-h3">
           <h3>Please enter relevant information</h3>
-          <h5>Mandatory Field (*)</h5>
+          <small>Mandatory Field <sup>(*)</sup></small>
         </div>
-        <div class="form-left"></div>
-        <div class="form-right"></div>
+
+        <div class="form-wrapper">
+          <div class="form-left">
+            <form action="/submit">
+              <div class="district">
+                <label for="division" class="flex">Division <sup>*</sup></label>
+                <select
+                  name="division"
+                  aria-label="division"
+                  id="division"
+                  required
+                >
+                  <option value="" selected disabled>--Select One--</option>
+                  <option value="Barishal">Barishal</option>
+                  <option value="chattogram">Chattogram</option>
+                  <option value="dhaka">Dhaka</option>
+                  <option value="khulna">Khulna</option>
+                  <option value="rajshahi">Rajshahi</option>
+                  <option value="rangpur">Rangpur</option>
+                  <option value="mymenshingh">Mymenshingh</option>
+                  <option value="sylhet">Sylhet</option>
+                </select>
+              </div>
+
+              <div class="courses">
+                <label for="courses" class="flex">Courses <sup>*</sup></label>
+                <select
+                  name="courses"
+                  aria-label="courses"
+                  id="courses"
+                  required
+                >
+                  <option value="" selected disabled>--Select One--</option>
+                  <option value="uiux">UI/UX</option>
+                  <option value="webdevelopment">Web Development</option>
+                </select>
+              </div>
+
+              <div class="name">
+                <label for="name" class="flex">Name <sup>*</sup></label>
+                <input type="text" id="name" name="name" required />
+              </div>
+
+              <div class="f-name">
+                <label for="name" class="flex">Father Name <sup>*</sup></label>
+                <input type="text" id="name" name="name" required />
+              </div>
+
+              <div class="m-name">
+                <label for="name" class="flex">Mother Name <sup>*</sup></label>
+                <input type="text" id="name" name="name" required />
+              </div>
+
+              <div class="dob">
+                <label for="dob" class="flex">Date of Birth <sup>*</sup></label>
+                <input type="date" id="dob" name="dob" required />
+              </div>
+
+              <div class="gender">
+                <label for="gender" class="g-font">Gender<sup>*</sup></label>
+                <input
+                  type="radio"
+                  id="male"
+                  name="gender"
+                  value="male"
+                  class="gender"
+                />
+                <label for="male">Male</label>
+                <input
+                  type="radio"
+                  id="female"
+                  name="gender"
+                  value="female"
+                  class="gender"
+                />
+                <label for="female">Female</label>
+              </div>
+
+              <div class="email">
+                <label for="email" class="flex">Email <sup>*</sup> </label>
+                <input type="email" id="email" name="email" />
+                <small>(e.g: example@mail.com)</small>
+              </div>
+
+              <div class="phone">
+                <label for="phone" class="flex">Phone <sup>*</sup> </label>
+                <input type="tel" id="phone" name="phone" />
+                <small>Must be 11 digit (eg: 01812345689)</small>
+              </div>
+            </form>
+          </div>
+          <div class="form-right">
+            <form action="/submit">
+              <div class="id">
+                <label for="id" class="flex">Identification <sup>*</sup></label>
+                <select name="id" aria-label="id" id="id" required>
+                  <option value="" selected disabled>--Select One--</option>
+                  <option value="birthcertificate">Birth Certificate</option>
+                  <option value="nid">NID</option>
+                </select>
+              </div>
+            </form>
+          </div>
+        </div>
       </section>
       <!-- Form Section End -->
     </main>
