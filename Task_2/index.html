@@ -67,6 +67,7 @@
         padding: 0px 20px;
         color: gray;
         font-weight: 300;
+        border-bottom: 1px dashed #ccc;
       }
 
       .flex {
@@ -99,25 +100,55 @@
       .form-wrapper {
         display: flex;
         justify-content: space-between;
+        padding-top: 20px;
       }
 
-      input {
+      input,
+      select {
         width: 100%;
         height: 30px;
         background-color: white;
         border: 1px solid lightgray;
+        box-sizing: border-box;
       }
 
       .gender {
         display: flex;
         width: 100px;
         gap: 10px;
-        text-align: center;
         align-items: center;
       }
 
       label {
         padding-top: 10px;
+      }
+
+      .button {
+        display: flex;
+        justify-content: center;
+        padding: 50px 0px;
+      }
+
+      .button button {
+        font-size: 30px;
+        color: gold;
+        background-color: #da291c;
+        border-radius: 10px;
+      }
+
+      #footer-container {
+        background-color: whitesmoke;
+        text-align: center;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      .copy {
+        padding: 2px 0px;
+      }
+
+      .copy h5 {
+        font-weight: 300;
       }
     </style>
   </head>
@@ -157,7 +188,16 @@
           <div class="form-left">
             <form action="/submit">
               <div class="district">
-                <label for="division" class="flex">Division <sup>*</sup></label>
+                <label for="division" class="flex"
+                  >Division
+                  <span
+                    ><small
+                      >(Institute Division: Where you want to do your
+                      course)</small
+                    ></span
+                  >
+                  <sup>*</sup></label
+                >
                 <select
                   name="division"
                   aria-label="division"
@@ -252,13 +292,109 @@
                   <option value="birthcertificate">Birth Certificate</option>
                   <option value="nid">NID</option>
                 </select>
+                <small
+                  >Identification No. (Must be 10 digits for new NID or 17
+                  digits for old NID. If your National ID is 13 digits, then
+                  please add your birth year with the ID as prefix. Example:
+                  1980XXXXXXXXXXXXX)*</small
+                >
+                <input
+                  type="number"
+                  id="number"
+                  name="number"
+                  min="0"
+                  max="9"
+                  required
+                />
+              </div>
+              <div class="home-division">
+                <label for="h-division" class="flex"
+                  >Home Division <sup>*</sup></label
+                >
+                <select name="h-division" aria-label="id" id="id" required>
+                  <option value="" selected disabled>--Select One--</option>
+                  <option value="Barishal">Barishal</option>
+                  <option value="chattogram">Chattogram</option>
+                  <option value="dhaka">Dhaka</option>
+                  <option value="khulna">Khulna</option>
+                  <option value="rajshahi">Rajshahi</option>
+                  <option value="rangpur">Rangpur</option>
+                  <option value="mymenshingh">Mymenshingh</option>
+                  <option value="sylhet">Sylhet</option>
+                </select>
+              </div>
+
+              <div class="upazila">
+                <label for="upazila" class="flex">Upazila<sup>*</sup></label>
+                <select name="upazila" aria-label="id" id="id" required>
+                  <option value="" selected disabled>--Select One--</option>
+                </select>
+              </div>
+
+              <div class="address">
+                <label for="address" class="flex"
+                  >Village/House No./Road No./Other Alternative
+                  <sup>*</sup></label
+                >
+                <input type="text" id="address" name="address" required />
+              </div>
+
+              <div class="p-office">
+                <label for="postoffice" class="flex"
+                  >Post Office <sup>*</sup></label
+                >
+                <input type="text" id="postoffice" name="postoffice" required />
+              </div>
+
+              <div class="eq">
+                <label for="eq" class="flex"
+                  >Educational Qualification <sup>*</sup>
+                  <span><small>(Higher Level)</small></span></label
+                >
+                <select name="eq" aria-label="eq" id="eq" required>
+                  <option value="" selected disabled>--Select One--</option>
+                  <option value="hsc">Higher Secondary/Equivalent</option>
+                  <option value="bachelor">Bachelor</option>
+                  <option value="master">Master</option>
+                  <option value="phd">PhD</option>
+                </select>
+              </div>
+
+              <div class="image">
+                <label for="image" class="flex">Photograph <sup>*</sup></label>
+                <input type="file" name="image" id="image" />
+                <small
+                  >(File type must be jpg or jpeg or png. Maximum file size 2
+                  mb.)</small
+                >
+              </div>
+
+              <div class="sign">
+                <label for="sign" class="flex">Signature <sup>*</sup></label>
+                <input type="file" name="sign" id="sign" />
+                <small
+                  >(File type must be jpg or jpeg or png. Maximum file size 2
+                  mb.)</small
+                >
               </div>
             </form>
           </div>
         </div>
       </section>
       <!-- Form Section End -->
+
+      <div class="button">
+        <button>Submit Data</button>
+      </div>
     </main>
     <!-- Main End -->
+
+    <!-- ======== Footer ======== -->
+    <footer id="footer-container">
+      <div class="copy">
+        <h5>© Designed by Jobaieer</h5>
+      </div>
+    </footer>
+    <!-- Footer End -->
   </body>
 </html>
