@@ -1,0 +1,49 @@
+/**
+* Task 3
+* Global CSS File
+* Written by Jobaieer
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-color: #ffff;
+  --sp-font-color: #4a4545;
+  --primary-color: #0000;
+  --sp-color: #5669ff;
+}
+
+body {
+  font-family: poppins;
+}
+
+p {
+  color: var(--sp-font-color);
+}
+
+.background {
+  background-color: whitesmoke;
+}
+
+.heading {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.button-set {
+  background-color: var(--sp-color);
+  border: 1px solid var(--sp-color);
+  border-radius: 5px;
+  width: 140px;
+  height: 50px;
+  font-size: 15px;
+  color: var(--font-color);
+}
+
+.sp-color {
+  color: var(--sp-color);
+}
