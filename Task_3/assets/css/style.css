@@ -1,4 +1,190 @@
 /**
 * Task 3
+* Style CSS File
 * Written by Jobaieer
 */
+
+/* Header Container*/
+
+/*For Hero section*/
+
+.margin {
+  padding: 0px 100px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ul-set li {
+  list-style: none;
+}
+.navbar img {
+  height: 80px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 30px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+/* Hero Section */
+
+.hero-section {
+  display: flex;
+  padding-left: 100px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-right {
+  width: 50%;
+}
+
+.input-field {
+  height: 30px;
+  width: 350px;
+  border-radius: 5px;
+  border: 1px solid var(--font-color);
+  background-color: var(--font-color);
+  color: var(--sp-font-color);
+}
+
+.sent-icon {
+  position: absolute;
+  transform: translateX(-40px);
+}
+
+.hero-right p {
+  padding-top: 10px;
+}
+
+.hero-right form {
+  padding-top: 20px;
+}
+.hero-left {
+  display: flex;
+}
+
+.hi1 {
+  height: 500px;
+  position: absolute;
+  left: 940px;
+  z-index: 1;
+}
+
+.hi2 {
+  height: 700px;
+}
+
+/* Main Container */
+
+/* About Section */
+
+.about-h h1 {
+  text-align: center;
+}
+
+.about-h p {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  padding: 30px 0px;
+}
+
+.card {
+  border: 1px solid var(--font-color);
+  background-color: var(--font-color);
+}
+
+.set-card {
+  text-align: center;
+  padding: 40px 40px;
+}
+
+.bt {
+  display: flex;
+  justify-content: center;
+}
+
+/* Download Section */
+
+#download-section {
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.download-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.download-img {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Information Section */
+
+.info-li li {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-icon {
+  padding-top: 15px;
+}
+.info-wrapper {
+  display: flex;
+  gap: 30px;
+}
+
+.info-write {
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+  gap: 20px;
+  padding-top: 25px;
+  padding-bottom: 50px;
+}
+
+#info-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.info-left {
+  display: flex;
+}
+
+.iio {
+  position: relative;
+  transform: translateX(150px) translateY(70px);
+  z-index: 1;
+  height: 600px;
+}
+
+.iit {
+  position: relative;
+  transform: translateY(150px);
+  height: 400px;
+}
+
+.see-btn {
+  padding-left: 66px;
+}
