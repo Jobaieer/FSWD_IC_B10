@@ -12,7 +12,7 @@ What did i learn while building this project? What challenges did i face and how
 -In `HTML` mainly understanding about types of form, Form's Attributes, Elements, Inputs, Inputs's Attributes. In `CSS` mainly understanding Selectors, Flex.
 
 `Task-3`
--In `HTML` mainly create and visible all elements, apply types of tag [in iframe - google map attachment] . In `CSS` mainly understanding and solve complex design using Multiple Selectors, Flex, Grid, Border's types of properties.
+-In `HTML` mainly create and visible all elements, apply types of tag [in iframe - google map attachment], re-use classes. In `CSS` mainly understanding and solve complex design using Multiple Selectors, Flex, Grid, Border's types of properties.
 
 ## Task Deployment
 
